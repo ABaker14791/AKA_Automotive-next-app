@@ -33,7 +33,6 @@ const Home: NextPage<Props> = (props) => {
           return <ProductCard product={product} key={product.id} />;
         })}
       </div>
-      <footer className={styles.footer}>AKA Automotive</footer>
     </div>
   );
 };

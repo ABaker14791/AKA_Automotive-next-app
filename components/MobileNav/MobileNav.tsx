@@ -1,9 +1,9 @@
 import React from "react";
 import Link from "next/link";
 import { FaTimes } from "react-icons/fa";
-import styles from "./MobileNav.module.scss";
+import styles from "./MobileNav.module.css";
 
-const MobileNav = ({ isOpen, toggle }) => {
+const MobileNav = ({ isOpen, toggle }: any) => {
   return (
     <div className={isOpen ? styles.containerOpen : styles.container}>
       <div onClick={toggle} className={styles.icon}>
