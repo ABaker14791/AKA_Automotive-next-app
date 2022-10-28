@@ -143,14 +143,14 @@ interface Cart {
   set_paid: false;
 }
 
-// interface Attribute {
-// 	id: number;
-// 	name: string;
-// 	position: number;
-// 	visible: boolean;
-// 	variation: boolean;
-// 	options: string[];
-// }
+export interface Attribute {
+  id: number;
+  name: string;
+  position: number;
+  visible: boolean;
+  variation: boolean;
+  options: string[];
+}
 
 export interface Image {
   id: number;

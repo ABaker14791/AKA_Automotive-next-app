@@ -21,7 +21,9 @@ const ProductCard = (props: Props) => {
       </div>
       <div className={styles.description}>
         <span>{product.name}</span>
-        <span>--</span>
+        <span>
+          {product.attributes[0].name}: {product.attributes[0].options[0]}
+        </span>
         <span>
           <strong>£{product.regular_price}</strong>
         </span>

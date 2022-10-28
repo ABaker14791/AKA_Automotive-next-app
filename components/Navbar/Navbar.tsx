@@ -21,7 +21,7 @@ const Navbar = ({ toggle }: any) => {
               src={Logo}
               width="280px"
               height="160px"
-              alt="moto morini west yorkshire"
+              alt="AKA Automotive"
             />
           </a>
         </Link>
@@ -31,15 +31,27 @@ const Navbar = ({ toggle }: any) => {
       </div>
 
       <div className={styles.nav__menu}>
-        <Link href="/">
+        <Link href="/newbikes">
           <a
             className={
-              currentRoute === "/"
+              currentRoute === "/newbikes"
                 ? `${styles.nav__link} ${styles.active}`
                 : `${styles.nav__link}`
             }
           >
-            Home
+            New Bikes
+          </a>
+        </Link>
+
+        <Link href="/usedbikes">
+          <a
+            className={
+              currentRoute === "/usedbikes"
+                ? `${styles.nav__link} ${styles.active}`
+                : `${styles.nav__link}`
+            }
+          >
+            Used Bikes
           </a>
         </Link>
 
@@ -51,7 +63,7 @@ const Navbar = ({ toggle }: any) => {
                 : `${styles.nav__link}`
             }
           >
-            Heritage
+            Shop
           </a>
         </Link>
 
@@ -63,7 +75,7 @@ const Navbar = ({ toggle }: any) => {
                 : `${styles.nav__link}`
             }
           >
-            About Us
+            About
           </a>
         </Link>
 
@@ -75,7 +87,7 @@ const Navbar = ({ toggle }: any) => {
                 : `${styles.nav__link}`
             }
           >
-            Contact Us
+            Contact
           </a>
         </Link>
       </div>

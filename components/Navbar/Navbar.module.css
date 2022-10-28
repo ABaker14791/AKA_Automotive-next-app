@@ -7,8 +7,9 @@
   padding: 0.5rem calc((100vw - 1000px) / 2);
   z-index: 10;
   border-bottom: 2px solid gold;
-
-  @media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 768px) {
+  .nav {
     justify-content: center;
   }
 }
@@ -21,8 +22,10 @@
 .nav__menu {
   display: flex;
   align-items: center;
+}
 
-  @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
+  .nav__menu {
     display: none;
   }
 }
@@ -30,8 +33,9 @@
 .nav__button {
   display: none;
   color: gray;
-
-  @media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 768px) {
+  .nav__button {
     display: block;
     position: absolute;
     top: 0;
@@ -57,7 +61,6 @@
 
 .nav__link:hover {
   color: red;
-  box-shadow: 0 2px 0 #000;
 }
 
 .active {

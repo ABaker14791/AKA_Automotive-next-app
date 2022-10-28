@@ -19,9 +19,16 @@ const MobileNav = ({ isOpen, toggle }: any) => {
             </Link>
           </li>
           <li>
-            <Link href="/heritage">
+            <Link href="/newbikes">
               <a className={styles.link} onClick={toggle}>
-                Heritage
+                New Bikes
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/usedbikes">
+              <a className={styles.link} onClick={toggle}>
+                Used Bikes
               </a>
             </Link>
           </li>

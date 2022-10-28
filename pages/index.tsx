@@ -2,10 +2,14 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { GetStaticProps } from "next";
+import Image from "next/image";
 import { fetchWooCommerceProducts } from "../utils/wooCommerceApi";
 import { Product } from "../utils/wooCommerceTypes";
 // Components
 import ProductCard from "../components/ProductCard/ProductCard";
+import Hero from "../components/Hero/Hero";
+//  Images
+import newBikeImg from "../public/index_assets/golded.jpeg";
 
 interface Props {
   products: Product[];
@@ -28,10 +32,30 @@ const Home: NextPage<Props> = (props) => {
           async
         /> */}
       </Head>
-      <div className={styles.card_container}>
-        {products.map((product) => {
-          return <ProductCard product={product} key={product.id} />;
-        })}
+      <Hero />
+
+      <div className={styles.product_tiles}>
+        <div className={styles.products_tile}>
+          <Image src={newBikeImg} />
+          <p>New Bikes</p>
+        </div>
+        <div className={styles.products_tile}>
+          <Image src={newBikeImg} />
+          <p>Used Bikes</p>
+        </div>
+        <div className={styles.products_tile}>
+          <Image src={newBikeImg} />
+          <p>Shop Clothing</p>
+        </div>
+      </div>
+
+      <div className={styles.category_preview}>
+        <h3 className={styles.category_heading}>Recent Used Bikes</h3>
+        <div className={styles.card_container}>
+          {products.map((product) => {
+            return <ProductCard product={product} key={product.id} />;
+          })}
+        </div>
       </div>
     </div>
   );
