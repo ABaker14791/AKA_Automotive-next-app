@@ -41,3 +41,23 @@ export async function fetchWooCommerceProducts() {
     throw new Error(error);
   }
 }
+
+// fetch all categories
+export async function fetchWooCommerceCategories() {
+  try {
+    const response = await api.get("products/categories");
+    return response;
+  } catch (error: any) {
+    throw new Error(error);
+  }
+}
+
+// fetch single product by id
+export async function fetchWooCommerceSingle(id: string) {
+  try {
+    const response = await api.get(`products/${id}`);
+    return response;
+  } catch (error: any) {
+    throw new Error(error);
+  }
+}

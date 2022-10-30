@@ -3,6 +3,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { GetStaticProps } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { fetchWooCommerceProducts } from "../utils/wooCommerceApi";
 import { Product } from "../utils/wooCommerceTypes";
 // Components
@@ -35,28 +36,40 @@ const Home: NextPage<Props> = (props) => {
       <Hero />
 
       <div className={styles.product_tiles}>
-        <div className={styles.products_tile}>
-          <Image src={newBikeImg} />
-          <p>New Bikes</p>
-        </div>
-        <div className={styles.products_tile}>
-          <Image src={newBikeImg} />
-          <p>Used Bikes</p>
-        </div>
-        <div className={styles.products_tile}>
-          <Image src={newBikeImg} />
-          <p>Shop Clothing</p>
-        </div>
+        <Link href="/newbikes">
+          <div className={styles.products_tile}>
+            <Image src={newBikeImg} />
+            <p>New Bikes</p>
+          </div>
+        </Link>
+        <Link href="/usedbikes">
+          <div className={styles.products_tile}>
+            <Image src={newBikeImg} />
+            <p>Used Bikes</p>
+          </div>
+        </Link>
+        <Link href="/">
+          <div className={styles.products_tile}>
+            <Image src={newBikeImg} />
+            <p>Shop Clothing</p>
+          </div>
+        </Link>
       </div>
 
-      <div className={styles.category_preview}>
+      {/* <div className={styles.category_preview}>
         <h3 className={styles.category_heading}>Recent Used Bikes</h3>
         <div className={styles.card_container}>
           {products.map((product) => {
-            return <ProductCard product={product} key={product.id} />;
+            return (
+              <Link href={"/usedbikes/" + product.id}>
+                <div className={styles.product_card}>
+                  <ProductCard product={product} key={product.id} />
+                </div>
+              </Link>
+            );
           })}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

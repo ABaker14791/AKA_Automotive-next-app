@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 90%;
+  padding-top: 2em;
+}
+
+.main_image {
+  width: 50%;
+  height: 80vh;
+  position: relative;
+}
+
+.summary {
+  width: 50%;
+  padding-left: 2em;
+}

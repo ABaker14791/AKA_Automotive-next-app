@@ -1,0 +1,29 @@
+.usedbike_container {
+  display: flex;
+}
+
+.card {
+  max-width: 400px;
+  min-width: 280px;
+  padding: 1.4em 1em;
+  border-radius: 5px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  margin-right: 1em;
+  cursor: pointer;
+}
+
+.image_container {
+  position: relative;
+  width: 100%;
+  /* height: 100%; */
+  padding-bottom: 100%; /* forces square aspect ratio */
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1em 0 0 0;
+  gap: 0.6em;
+}
